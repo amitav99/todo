@@ -1,0 +1,11 @@
+<header>
+ <nav class="navbar navbar-light navbar-dark bg-dark">
+    <div><a href="http://localhost:4200/todos" class="navbar-brand">In28minutes</a></div>
+    <a *ngIf="hardcoded.AuthenticationService.isUserLoggedIn" routerLink ="/welcome" class="navbar-link">Home</a>
+    <a *ngIf="hardcoded.AuthenticationService.isUserLoggedIn" routerLink="/todos" class="navbar-link">Todos</a>
+    <ul class="navbar-nav">
+      <li><a *ngIf="!hardcoded.AuthenticationService.isUserLoggedIn" routerLink="/login"class="navbar-link">Login</a></li>
+       <li><a *ngIf="hardcoded.AuthenticationService.isUserLoggedIn" routerLink="/logout"class="navbar-link">Logout</a></li>
+    </ul>
+</nav>
+</header>
